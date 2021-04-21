@@ -2,7 +2,7 @@
 using namespace std;
 int main(int argc, char const *argv[]) 
 {
-    int a[] = {9,7,3,2,95,8,1,4,6};
+    int a[9] = {9,7,3,2,95,8,1,4,6};
     for (int i = 0; i < 9; ++i)
         {
             int flag = 0;
@@ -22,7 +22,7 @@ int main(int argc, char const *argv[])
         {
             cout<<a[i]<<" ";
         }
-    cout<<endl<<endl;
+    cout<<endl;
     system("read");
     return 0;
 }

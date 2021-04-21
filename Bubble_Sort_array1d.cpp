@@ -8,5 +8,6 @@ using namespace std;
 
 int main() {
     cout<<"nihao世界"<<endl;
+    system("read");
     return 0;
 }

@@ -3,7 +3,7 @@ using namespace std;
 
 // 规定棋盘的大小（几皇后问题）
 // const int N=8
-#define N 4
+#define N 8
 int chessboard[N][N] = {};
 // 定义解的数目
 int solve_num = 0;

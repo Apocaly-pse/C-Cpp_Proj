@@ -22,7 +22,7 @@ int main(int argc, char const *argv[])
         {
             cout<<a[i]<<" ";
         }
-    cout<<endl;
+    cout<<endl<<endl;
     system("read");
     return 0;
 }

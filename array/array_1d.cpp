@@ -22,5 +22,6 @@ int main(int argc, char const *argv[])
     cout<<arr<<endl;
     cout<<&arr[0]<<endl;
     cout<<&arr[1]<<endl;
+    cout<<arr.size()<<endl;
     return 0;
 }

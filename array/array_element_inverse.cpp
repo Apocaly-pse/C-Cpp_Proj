@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void exchange(int a, int &b) {
+void exchange(int &a, int &b) {
     int temp = a;
     a = b;
     b = temp;
@@ -12,8 +12,9 @@ int main() {
 
     for (int i = 0; i < 6; ++i)
     {
-        cout<<arr[i]<<endl;
+        cout<<arr[i]<<" ";
     }
+    cout<<endl;
     int start = 0;
     int end = sizeof(arr) / sizeof(arr[0]) - 1;
     for (; start < end; start++, end--)
@@ -25,6 +26,8 @@ int main() {
     }
     for (int i = 0; i < 6; ++i)
     {
-        cout<<arr[i]<<"\n";
+        cout<<arr[i]<<" ";
     }
+    cout<<endl;
+    return 0;
 }

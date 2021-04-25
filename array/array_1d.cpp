@@ -18,10 +18,10 @@ int main(int argc, char const *argv[])
     int arr[3] = {1,2,3};
     cout<<sizeof(arr)<<endl;
     cout<<sizeof(arr[2])<<endl;
-    cout<<sizeof(arr)/sizeof(arr[0])<<endl;
+    cout<<sizeof(arr)/sizeof(int)<<endl;
     cout<<arr<<endl;
     cout<<&arr[0]<<endl;
     cout<<&arr[1]<<endl;
-    cout<<arr.size()<<endl;
+    // cout<<arr.size()<<endl;
     return 0;
 }

@@ -14,53 +14,48 @@ using namespace std;
 
 */
 
-// 递归实现快速排序算法
-void QuickSort(int arr[], int L, int R)
-{
-    if (L >= R)
-    {
-        // 递归结束
-        return ;
-    }
-    int left = L, right = R;
-    int pivot = arr[left];
-    // 遍历数组
-    while(left < right)
-    {
-        while(left < right && arr[right] >= pivot)
-        {
-            right--;
-        }
-        if (left < right)
-        {
-            arr[left] = arr[right];
-        }
+int Partition(int A[], int p, int r);
 
-        while(left < right && arr[left] <= pivot)
+// 递归实现快速排序算法
+void QuickSort(int A[], int p, int r)
+{
+    if (p < r)
+    {
+        int q = Partition(A, p, r);
+        QuickSort(A, p, q - 1);
+        QuickSort(A, q + 1, r);
+    }
+}
+void exchange(int &a, int &b)
+{
+    int t = a;
+    a=b;
+    b=t;
+}
+
+// 子数组的处理
+int Partition(int A[], int p, int r)
+{
+    int x = A[r];
+    int i = p - 1;
+    for (int j = p; j < r; ++j)
+    {
+        if (A[j] <= x)
         {
-            left++;
-        }
-        if (left < right)
-        {
-            arr[right] = arr[left];
-        }
-        else
-        {
-            arr[left] = pivot;
+            i = i + 1;
+            exchange(A[i], A[j]);
         }
     }
-    // 对左子序列进行快排
-    QuickSort(arr, L, right - 1);
-    // 对右子序列进行快排
-    QuickSort(arr, right + 1, R);
+    exchange(A[i + 1], A[r]);
+    return i + 1;
 }
 
 // 此函数用于打印输出数组
-void printArray(int arr[], int len)
+void printArray(int A[], int len)
 {
     for (int i = 0; i < len; ++i)
     {
-        cout << arr[i] << " ";
+        cout << A[i] << " ";
     }
     cout << endl;
 }

@@ -14,7 +14,7 @@ using namespace std;
 
 */
 
-int Partition(int A[], int p, int r);
+int Partition(int A[], int p, int r); // 函数声明
 
 // 递归实现快速排序算法
 void QuickSort(int A[], int p, int r)

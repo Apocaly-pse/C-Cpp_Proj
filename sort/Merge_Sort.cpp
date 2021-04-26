@@ -15,42 +15,7 @@ using namespace std;
 // 递归实现归并排序算法
 void MergeSort(int arr[], int L, int R)
 {
-    if (L >= R)
-    {
-        // 递归结束
-        return ;
-    }
-    int left = L, right = R;
-    int pivot = arr[left];
-    // 遍历数组
-    while(left < right)
-    {
-        while(left < right && arr[right] >= pivot)
-        {
-            right--;
-        }
-        if (left < right)
-        {
-            arr[left] = arr[right];
-        }
-
-        while(left < right && arr[left] <= pivot)
-        {
-            left++;
-        }
-        if (left < right)
-        {
-            arr[right] = arr[left];
-        }
-        else
-        {
-            arr[left] = pivot;
-        }
-    }
-    // 对左子序列进行快排
-    QuickSort(arr, L, right - 1);
-    // 对右子序列进行快排
-    QuickSort(arr, right + 1, R);
+    
 }
 
 // 此函数用于打印输出数组

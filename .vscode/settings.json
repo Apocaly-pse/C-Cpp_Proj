@@ -1,4 +1,8 @@
 {
     "python.formatting.provider": "autopep8",
-    "python.pythonPath": "/opt/homebrew/Caskroom/miniforge/base/envs/tf24/bin/python"
+    "python.pythonPath": "/opt/homebrew/Caskroom/miniforge/base/envs/tf24/bin/python",
+    "files.associations": {
+        "cmath": "cpp",
+        "complex": "cpp"
+    }
 }

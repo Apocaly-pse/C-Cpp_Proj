@@ -6,7 +6,7 @@ void printArr(vector<vector<int> > &arr)
 {
     for (int i = 0; i < arr.size(); ++i)
     {
-        for (int j = 0; j < arr[0].size(); ++j)
+        for (int j = 0; j < arr[i].size(); ++j)
         {
             cout << arr[i][j] << " ";
         }
@@ -17,7 +17,7 @@ void printArr(vector<vector<int> > &arr)
 
 void triangle()
 {
-    int N=10;
+    int N = 10;
     // vector<vector<int> > arr (10, vector<int> (10, 1));
     // for (int i = 0; i < N; ++i)
     // {
@@ -30,8 +30,9 @@ void triangle()
     // return ;
     vector<vector<int> > arr;
     arr.resize(N);//N行
-    for (int k = 0; k < N; ++k){
-        arr[k].resize(k+1);//每行为k+1列
+    for (int k = 0; k < N; ++k)
+    {
+        arr[k].resize(k + 1); //每行为k+1列
     }
     for (int i = 0; i < N; ++i)
     {
@@ -40,7 +41,7 @@ void triangle()
     }
     for (int i = 2; i < N; i++)
     {
-        for (int j = 1; j <i; j++)
+        for (int j = 1; j < i; j++)
         {
             arr[i][j] = arr[i - 1][j - 1] + arr[i - 1][j];
         }

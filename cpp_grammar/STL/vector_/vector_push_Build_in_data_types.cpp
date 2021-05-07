@@ -8,7 +8,7 @@ using namespace std;
 
 void myprint(int val)
 {
-    cout<<val<<endl;
+    cout<<val;
 }
 
 void test1()

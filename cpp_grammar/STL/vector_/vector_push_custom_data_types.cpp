@@ -61,7 +61,6 @@ void test1()
 void myprint1(P* &val)
 {
     cout<<"name: "<<(*val).age<<"  age: "<<(*val).name<<endl;
-    // cout<<"name: "<<val.name<<"  age: "<<val.age<<endl;
 }
 
 // 存放自定义数据类型的指针

@@ -3,9 +3,8 @@ using namespace std;
 
 int main()
 {
-  // cout<<sizeof(10)<<endl;
-  n = 10;
+  const int n = 10;
   char a[n][n+1];
-  cout<<sizeof(a)>>1;
+  printf("%lu\n", sizeof(a)>>1);
   return 0;
 }

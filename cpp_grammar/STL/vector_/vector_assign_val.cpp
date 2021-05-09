@@ -31,7 +31,7 @@ void test1()
     v3.assign(v1.begin() + 2, v1.end());
     printV(v3);
 
-    // 3. n个elem
+    // 3. n个elem, assign()函数的重载版本
     vector<int> v4;
     v4.assign(20, 3);
     printV(v4);

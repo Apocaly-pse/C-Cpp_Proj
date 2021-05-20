@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void inverseStr(vector<char> &s)
+void reverseVec(vector<char> &s)
 {
     for (int i = 0; i < s.size()/2; i++)
     {
@@ -33,7 +33,8 @@ int main(int argc, char const *argv[])
     s.push_back('o');
     printStr(s);
     // cout<<s[1]<<endl;
-    inverseStr(s);
+    // reverseVec(s);
+    reverse(s.begin(), s.end());
     printStr(s);
     return 0;
 }

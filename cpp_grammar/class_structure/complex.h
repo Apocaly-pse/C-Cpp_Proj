@@ -180,4 +180,20 @@ operator / (const complex& x, const complex& y)
 {
     return x*conj(y) / norm(y);
 }
+
+#include <iostream>
+using namespace std;
+
+// 格式化输出复数
+// 重载 << 运算符
+// cout是ostream对象
+ostream&
+operator << (ostream& os, const complex& x)
+{
+    if (imag(x)<0)
+        return os << real (x) << '-' << -imag (x) <<'i';
+    else
+        return os << real (x) << '+' << imag (x) << 'i';
+}
+
 #endif

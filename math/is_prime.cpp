@@ -1,19 +1,18 @@
 #include <iostream>
+
 using namespace std;
-bool isPrime(int n)
-{
-    for (int i = 2; i < n / 2; i++)
-    {
-        if (n % i == 0)
-        {
+
+bool isPrime(int n) {
+    for (int i = 2; i < n / 2; i++) {
+        if (n % i == 0) {
             return false;
             break;
         }
     }
     return true;
 }
-int main()
-{
+
+int main() {
     //     int n, k;
     //     // cout<<"Enter a positive integer: "; cin>>n;
 
@@ -30,8 +29,7 @@ int main()
     //             cout<<n<<" is prime number."<<endl;
     // }
     int n = 97;
-    if (isPrime(n))
-    {
+    if (isPrime(n)) {
         cout << n << "是素数" << endl;
     }
 

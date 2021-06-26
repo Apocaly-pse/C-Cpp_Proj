@@ -6,13 +6,11 @@
 
 using namespace std;
 
-void myprint(int val)
-{
-    cout<<val;
+void myprint(int val) {
+    cout << val;
 }
 
-void test1()
-{
+void test1() {
     vector<int> v;
     v.push_back(1);
     v.push_back(3);
@@ -40,8 +38,7 @@ void test1()
 
 }
 
-int main() 
-{
+int main() {
     test1();
     return 0;
 }

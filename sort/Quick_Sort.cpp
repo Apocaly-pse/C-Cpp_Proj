@@ -1,5 +1,6 @@
 #include <iostream>
 #include <ctime>
+
 using namespace std;
 
 /*
@@ -15,37 +16,28 @@ using namespace std;
 */
 
 // 递归实现快速排序算法
-void QuickSort(int arr[], int L, int R)
-{
-    if (L >= R)
-    {
+void QuickSort(int arr[], int L, int R) {
+    if (L >= R) {
         // 递归结束
-        return ;
+        return;
     }
     int left = L, right = R;
     int pivot = arr[left];
     // 遍历数组
-    while(left < right)
-    {
-        while(left < right && arr[right] >= pivot)
-        {
+    while (left < right) {
+        while (left < right && arr[right] >= pivot) {
             right--;
         }
-        if (left < right)
-        {
+        if (left < right) {
             arr[left] = arr[right];
         }
 
-        while(left < right && arr[left] <= pivot)
-        {
+        while (left < right && arr[left] <= pivot) {
             left++;
         }
-        if (left < right)
-        {
+        if (left < right) {
             arr[right] = arr[left];
-        }
-        else
-        {
+        } else {
             arr[left] = pivot;
         }
     }
@@ -56,17 +48,14 @@ void QuickSort(int arr[], int L, int R)
 }
 
 // 此函数用于打印输出数组
-void printArray(int arr[], int len)
-{
-    for (int i = 0; i < len; ++i)
-    {
+void printArray(int arr[], int len) {
+    for (int i = 0; i < len; ++i) {
         cout << arr[i] << " ";
     }
     cout << endl;
 }
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
     clock_t t0, t1;
     t0 = clock();
     // 定义数组

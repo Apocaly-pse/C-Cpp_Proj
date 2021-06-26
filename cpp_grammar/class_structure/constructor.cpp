@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 /*
@@ -16,23 +17,24 @@ using namespace std;
 2. 当用户初始化有参构造函数之后, 编译器不再提供默认构造函数, 但是还会提供拷贝构造函数
     若用户初始化了拷贝构造函数, 则编译器不再提供其他普通的构造函数
 */
-class Person
-{
+class Person {
 public:
     // Person() {
     //     cout<<"默认构造函数调用"<<endl;
     // }
-    Person(int a ) {
-        cout<<"有参构造函数"<<endl;
+    Person(int a) {
+        cout << "有参构造函数" << endl;
         mage = a;
     }
+
     // Person(const Person &p) {
     //     cout<<"拷贝构造函数"<<endl;
     //     mage = p.mage;
     // }
     ~Person() {
-        cout<<"析构函数调用_"<<endl;
+        cout << "析构函数调用_" << endl;
     }
+
     int mage;
 };
 
@@ -52,8 +54,8 @@ void test2() {
     // Person p1(p);
     // cout<<"p1年龄为:"<<p1.mage<<endl;
 }
-int main(int argc, char const *argv[])
-{
+
+int main(int argc, char const *argv[]) {
     // test1();
     test2();
     return 0;

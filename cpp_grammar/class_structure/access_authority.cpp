@@ -1,15 +1,16 @@
 #include <iostream>
+
 using namespace std;
 
-class Person
-{
+class Person {
 public:
     // 公共权限
     string myName;
+
     void func() {
-        myName="zhangsan";
-        myCar="bentian";
-        Password=465;
+        myName = "zhangsan";
+        myCar = "bentian";
+        Password = 465;
     }
 
 protected:
@@ -22,11 +23,10 @@ private:
 };
 
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
     /* code */
     Person p;
-    p.myName="lisi";
+    p.myName = "lisi";
     // p.myCar="nnn";
     // p.Password=11111
 

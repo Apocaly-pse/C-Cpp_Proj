@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 /*
@@ -7,22 +8,25 @@ using namespace std;
 所有对象共享一个函数
 */
 
-class P
-{
+class P {
 public:
-    P(){};
-    ~P(){};
+    P() {};
+
+    ~P() {};
+
     static void func() {
         ma = 100;
-        cout<<"调用static func "<<endl;
+        cout << "调用static func " << endl;
     }
+
     static int ma;
 
 };
-int P::ma=10;
+
+int P::ma = 10;
 
 void t1() {
-    cout<<P::ma<<endl;
+    cout << P::ma << endl;
     // 类的实例化
     // 两种访问方式
     P p;
@@ -30,11 +34,10 @@ void t1() {
     p.func();
     // 通过类名进行访问
     P::func();
-    cout<<P::ma<<endl;
+    cout << P::ma << endl;
 }
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
     t1();
     return 0;
 }

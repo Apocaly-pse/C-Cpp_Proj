@@ -3,20 +3,16 @@
 
 using namespace std;
 
-void printV(vector<int> &v)
-{
-    for (vector<int>::iterator it = v.begin(); it < v.end(); ++it)
-    {
+void printV(vector<int> &v) {
+    for (vector<int>::iterator it = v.begin(); it < v.end(); ++it) {
         cout << *it << " ";
     }
     cout << endl;
 }
 
-void test1()
-{
+void test1() {
     vector<int> v1;
-    for (int i = 0; i < 5; i++)
-    {
+    for (int i = 0; i < 5; i++) {
         v1.push_back(i * 2 + 1);
     }
     printV(v1);
@@ -37,8 +33,7 @@ void test1()
     printV(v4);
 }
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
     test1();
     return 0;
 }

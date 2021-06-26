@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 /*
@@ -6,12 +7,14 @@ using namespace std;
     存在访问权限
     可以采用类名直接调用
 */
-class P
-{
+class P {
 public:
     static int ma;
+
     P();
+
     ~P();
+
 private:
     static int mb;
 };
@@ -20,11 +23,10 @@ int P::ma = 10;
 int P::mb = 20;
 
 void t1() {
-    cout<<P::ma<<endl;
+    cout << P::ma << endl;
 }
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
     t1();
     return 0;
 }

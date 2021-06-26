@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/hep/code/C-Cpp_Proj/fltk_proj/main.cpp
+iostream
+-
+FL/Fl.H
+-
+FL/Fl_Window.H
+-
+FL/Fl_Box.H
+-
+
+/Users/hep/code/C-Cpp_Proj/fltk_proj/test.cpp
+

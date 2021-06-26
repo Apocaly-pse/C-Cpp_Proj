@@ -1,5 +1,6 @@
 #include <iostream>
 #include <ctime>
+
 using namespace std;
 
 /*
@@ -17,31 +18,26 @@ using namespace std;
 int Partition(int A[], int p, int r); // 函数声明
 
 // 递归实现快速排序算法
-void QuickSort(int A[], int p, int r)
-{
-    if (p < r)
-    {
+void QuickSort(int A[], int p, int r) {
+    if (p < r) {
         int q = Partition(A, p, r);
         QuickSort(A, p, q - 1);
         QuickSort(A, q + 1, r);
     }
 }
-void exchange(int &a, int &b)
-{
+
+void exchange(int &a, int &b) {
     int t = a;
-    a=b;
-    b=t;
+    a = b;
+    b = t;
 }
 
 // 子数组的处理
-int Partition(int A[], int p, int r)
-{
+int Partition(int A[], int p, int r) {
     int x = A[r];
     int i = p - 1;
-    for (int j = p; j < r; ++j)
-    {
-        if (A[j] <= x)
-        {
+    for (int j = p; j < r; ++j) {
+        if (A[j] <= x) {
             i = i + 1;
             exchange(A[i], A[j]);
         }
@@ -51,17 +47,14 @@ int Partition(int A[], int p, int r)
 }
 
 // 此函数用于打印输出数组
-void printArray(int A[], int len)
-{
-    for (int i = 0; i < len; ++i)
-    {
+void printArray(int A[], int len) {
+    for (int i = 0; i < len; ++i) {
         cout << A[i] << " ";
     }
     cout << endl;
 }
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
     clock_t t0, t1;
     t0 = clock();
     // 定义数组

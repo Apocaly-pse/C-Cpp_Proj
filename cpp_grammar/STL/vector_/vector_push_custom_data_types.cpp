@@ -7,28 +7,25 @@ using namespace std;
 
 
 // 先定义一个Person类
-class P
-{
+class P {
 public:
     string name;
     int age;
-    P(string name, int age)
-    {
+
+    P(string name, int age) {
         this->name = name;
         this->age = age;
     }
 };
 
-void myprint(P &val)
-{
-    cout<<"name: "<<val.name<<"  age: "<<val.age<<endl;
+void myprint(P &val) {
+    cout << "name: " << val.name << "  age: " << val.age << endl;
 }
 
 
 // 存放自定义数据类型的值
-void test1()
-{
-    vector<P> v;
+void test1() {
+    vector <P> v;
     P p1("a", 1);
     P p2("b", 3);
     P p3("c", 5);
@@ -58,15 +55,13 @@ void test1()
 }
 
 
-void myprint1(P* &val)
-{
-    cout<<"name: "<<(*val).age<<"  age: "<<(*val).name<<endl;
+void myprint1(P *&val) {
+    cout << "name: " << (*val).age << "  age: " << (*val).name << endl;
 }
 
 // 存放自定义数据类型的指针
-void test2()
-{
-    vector<P*> v;
+void test2() {
+    vector < P * > v;
     P p1("a", 1);
     P p2("b", 3);
     P p3("c", 5);
@@ -98,8 +93,7 @@ void test2()
     for_each(v.begin(), v.end(), myprint1);
 }
 
-int main() 
-{
+int main() {
     // test1();
     test2();
     return 0;

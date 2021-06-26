@@ -1,5 +1,6 @@
 #include <iostream>
 #include <ctime>
+
 using namespace std;
 
 /*
@@ -13,23 +14,19 @@ using namespace std;
 */
 
 // 递归实现归并排序算法
-void MergeSort(int arr[], int L, int R)
-{
-    
+void MergeSort(int arr[], int L, int R) {
+
 }
 
 // 此函数用于打印输出数组
-void printArray(int arr[], int len)
-{
-    for (int i = 0; i < len; ++i)
-    {
+void printArray(int arr[], int len) {
+    for (int i = 0; i < len; ++i) {
         cout << arr[i] << " ";
     }
     cout << endl;
 }
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
     clock_t t0, t1;
     t0 = clock();
     // 定义数组

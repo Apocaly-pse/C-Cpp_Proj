@@ -3,21 +3,17 @@
 
 using namespace std;
 
-void printV(vector<int> &v)
-{
-    for (vector<int>::iterator it = v.begin(); it < v.end(); ++it)
-    {
+void printV(vector<int> &v) {
+    for (vector<int>::iterator it = v.begin(); it < v.end(); ++it) {
         cout << *it << " ";
     }
     cout << endl;
 }
 
-void test1()
-{
+void test1() {
     // 尾插法插入元素
     vector<int> v;
-    for (int i = 0; i < 5; i++)
-    {
+    for (int i = 0; i < 5; i++) {
         v.push_back(i * 2 + 1);
     }
     // 遍历vector
@@ -50,8 +46,7 @@ void test1()
     // 3 5 
 }
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
     test1();
     return 0;
 }

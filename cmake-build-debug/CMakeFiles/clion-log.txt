@@ -1,0 +1,46 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/opt/homebrew/Cellar/cmake/3.20.1/bin/cmake -DCMAKE_CXX_COMPILER=/opt/homebrew/Cellar/gcc/10.2.0_4/bin/g++-10 -G "CodeBlocks - Unix Makefiles" /Users/hep/code/C-Cpp_Proj
+-- The C compiler identification is AppleClang 12.0.5.12050022
+-- The CXX compiler identification is unknown
+-- Detecting C compiler ABI info
+CMake Error: Generator: execution of make failed. Make command was: /opt/homebrew/Cellar/cmake/3.20.1/bin/cmake cmTC_7d42c/fast && 
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc
+CMake Error: Generator: execution of make failed. Make command was: /opt/homebrew/Cellar/cmake/3.20.1/bin/cmake cmTC_c27c0/fast && 
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc - broken
+CMake Error at /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.19/Modules/CMakeTestCCompiler.cmake:66 (message):
+  The C compiler
+
+    "/Library/Developer/CommandLineTools/usr/bin/cc"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: /Users/hep/code/C-Cpp_Proj/cmake-build-debug/CMakeFiles/CMakeTmp
+    
+    Run Build Command(s):/opt/homebrew/Cellar/cmake/3.20.1/bin/cmake cmTC_c27c0/fast && No such file or directory
+    Generator: execution of make failed. Make command was: /opt/homebrew/Cellar/cmake/3.20.1/bin/cmake cmTC_c27c0/fast && 
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+CMake Error at CMakeLists.txt:2 (project):
+  The CMAKE_CXX_COMPILER:
+
+    /opt/homebrew/Cellar/gcc/10.2.0_4/bin/g++-10
+
+  is not a full path to an existing compiler tool.
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "CXX" or the CMake cache entry CMAKE_CXX_COMPILER to the full path
+  to the compiler, or to the compiler name if it is in the PATH.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/hep/code/C-Cpp_Proj/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/Users/hep/code/C-Cpp_Proj/cmake-build-debug/CMakeFiles/CMakeError.log".

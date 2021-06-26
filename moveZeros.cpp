@@ -22,16 +22,12 @@ using namespace std;
 //     return n;
 // }
 
-void moveZeroes(vector<int> &nums)
-{
+void moveZeroes(vector<int> &nums) {
     int flag = 0;
-    for (int i = 0; i < nums.size(); i++)
-    {
-        if (nums[i] == 0 && i < nums.size() - flag)
-        {
+    for (int i = 0; i < nums.size(); i++) {
+        if (nums[i] == 0 && i < nums.size() - flag) {
             flag += 1;
-            for (int j = i; j < nums.size() - flag; j++)
-            {
+            for (int j = i; j < nums.size() - flag; j++) {
                 nums[j] = nums[j + 1];
             }
             nums[nums.size() - flag] = 0;
@@ -39,17 +35,15 @@ void moveZeroes(vector<int> &nums)
     }
 }
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
     // string s;
     // s = "AB";
     // // s = "ZY";
     // cout << test(s) << endl;
     int arr[] = {1, 0, 0, 1, 9, 0};
-    vector <int> a (arr, arr + 4);
+    vector<int> a(arr, arr + 4);
     moveZeroes(a);
-    for (int i = 0; i < a.size(); ++i)
-    {
+    for (int i = 0; i < a.size(); ++i) {
         cout << a[i] << " ";
     }
     return 0;

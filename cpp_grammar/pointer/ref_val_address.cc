@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 // 交换变量:值传递方法
@@ -6,8 +7,8 @@ void swap_val(int a, int b) {
     int t = a;
     a = b;
     b = t;
-    cout<<a<<endl;
-    cout<<b<<endl;
+    cout << a << endl;
+    cout << b << endl;
 }
 
 // 交换变量: 引用传递
@@ -16,8 +17,8 @@ void swap_ref(int &a, int &b) {
     int t = a;
     a = b;
     b = t;
-    cout<<a<<endl;
-    cout<<b<<endl;
+    cout << a << endl;
+    cout << b << endl;
 }
 
 // 交换变量:地址传递
@@ -25,14 +26,14 @@ void swap_ads(int *a, int *b) {
     int t = *a;
     *a = *b;
     *b = t;
-    cout<<*a<<endl;
-    cout<<*b<<endl;
+    cout << *a << endl;
+    cout << *b << endl;
 }
 
 int main() {
     // 值传递,只改变形参, 不会改变实参
-    int a=10;
-    int b=20;
+    int a = 10;
+    int b = 20;
     // swap_val(a, b);
     // cout<<a<<endl;
     // cout<<b<<endl;
@@ -42,7 +43,7 @@ int main() {
     // cout<<b<<endl;
     // 地址传递, 改变的是指针指向的变量地址, 也会改变实参和形参
     swap_ads(&a, &b);
-    cout<<a<<endl;
-    cout<<b<<endl;
+    cout << a << endl;
+    cout << b << endl;
     return 0;
 }

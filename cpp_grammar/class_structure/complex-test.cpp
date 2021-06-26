@@ -15,10 +15,10 @@ using namespace std;
 //         return os << real (x) << '+' << imag (x) << 'i';
 // }
 
-void test1(){
+void test1() {
     complex c1(1, 2);
     complex c2(2, 2);
-    cout<<c2 / c1<<endl;
+    cout << c2 / c1 << endl;
     // complex c1(2, 1);
     // complex c2(4, 0);
 
@@ -45,8 +45,7 @@ void test1(){
     // cout << (5 + c2) << endl;
 }
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
     test1();
     return 0;
 }

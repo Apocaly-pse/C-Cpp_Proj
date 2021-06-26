@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 // this指针隐含贼每一个非静态成员函数内
 
@@ -9,18 +10,19 @@ using namespace std;
 class P {
 public:
     P(int a) {
-        this->a=a;
+        this->a = a;
     }
+
     int a;
+
     // 以引用的方式进行返回
-    P& add(P &p) {
-        this-> a += p.a;
+    P &add(P &p) {
+        this->a += p.a;
         return *this;
     };
 };
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
     /* code */
     // P p(19);
     // cout<<p.a<<endl;
@@ -28,6 +30,6 @@ int main(int argc, char const *argv[])
     P p1(1);
     P p2(2);
     p2.add(p1).add(p1);
-    cout<<p2.a<<endl;
+    cout << p2.a << endl;
     return 0;
 }
